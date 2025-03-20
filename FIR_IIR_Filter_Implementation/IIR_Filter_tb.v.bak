@@ -1,0 +1,31 @@
+module IIR_Filter_tb;
+
+reg clk, rst;
+reg [3:0] a, x;
+wire [3:0] y;
+
+IIR_Filter iirF();
+
+initial begin
+
+   clk = 0;
+
+end
+
+always
+	#5 clk = !clk;
+initial begin 
+
+	rst = 1;
+	a = 4'd2;
+	x = 4'd1;
+	#10 rst = 0;
+	
+	a = 4'd2;
+	x = 4'd1;
+
+end
+
+
+
+endmodule

@@ -1,0 +1,51 @@
+module signed_multiplier(
+    input [3:0] A, B,   // Combined input registers
+    output [7:0] P      // Combined output wires
+);
+
+// First row
+wire s11, s12, s13, s14;
+wire c11, c12, c13, c14;
+
+gray_cell GC1(.A(A[3]), .B(B[0]), .Cin(0), .Sin(0), .Co(c11), .So(s11));
+white_cell WC1(.A(A[2]), .B(B[0]), .Cin(0), .Sin(0), .Co(c12), .So(s12));
+white_cell WC2(.A(A[1]), .B(B[0]), .Cin(0), .Sin(0), .Co(c13), .So(s13));
+white_cell WC3(.A(A[0]), .B(B[0]), .Cin(0), .Sin(0), .Co(c14), .So(P[0]));
+
+// Second row
+wire s21, s22, s23, s24;
+wire c21, c22, c23, c24;
+
+gray_cell GC2(.A(A[3]), .B(B[1]), .Cin(c11), .Sin(0), .Co(c21), .So(s21));
+white_cell WC4(.A(A[2]), .B(B[1]), .Cin(c12), .Sin(s11), .Co(c22), .So(s22));
+white_cell WC5(.A(A[1]), .B(B[1]), .Cin(c13), .Sin(s12), .Co(c23), .So(s23));
+white_cell WC6(.A(A[0]), .B(B[1]), .Cin(c14), .Sin(s13), .Co(c24), .So(P[1]));
+
+// Third row
+wire s31, s32, s33, s34;
+wire c31, c32, c33, c34;
+
+gray_cell GC3(.A(A[3]), .B(B[2]), .Cin(c21), .Sin(0), .Co(c31), .So(s31));
+white_cell WC7(.A(A[2]), .B(B[2]), .Cin(c22), .Sin(s21), .Co(c32), .So(s32));
+white_cell WC8(.A(A[1]), .B(B[2]), .Cin(c23), .Sin(s22), .Co(c33), .So(s33));
+white_cell WC9(.A(A[0]), .B(B[2]), .Cin(c24), .Sin(s23), .Co(c34), .So(P[2]));
+
+// Fourth row
+wire s41, s42, s43, s44;
+wire c41, c42, c43, c44;
+
+white_cell WC10(.A(A[3]), .B(B[3]), .Cin(c31), .Sin(0), .Co(c41), .So(s41));
+gray_cell GC4(.A(A[2]), .B(B[3]), .Cin(c32), .Sin(s31), .Co(c42), .So(s42));
+gray_cell GC5(.A(A[1]), .B(B[3]), .Cin(c33), .Sin(s32), .Co(c43), .So(s43));
+gray_cell GC6(.A(A[0]), .B(B[3]), .Cin(c34), .Sin(s33), .Co(c44), .So(P[3]));
+
+// Full adder row
+wire s51, s52, s53, s54;
+wire c51, c52, c53, c54;
+
+FA fullAdder1(.A(1'b1), .B(c41), .Cin(c52), .Cout(c51), .Sum(P[7]));
+FA fullAdder2(.A(s41), .B(c42), .Cin(c53), .Cout(c52), .Sum(P[6]));
+FA fullAdder3(.A(s42), .B(c43), .Cin(c54), .Cout(c53), .Sum(P[5]));
+FA fullAdder4(.A(s43), .B(c44), .Cin(1'b1), .Cout(c54), .Sum(P[4]));
+
+endmodule
