@@ -1,0 +1,36 @@
+D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Ahb_master.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Ahb_master.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Ahb_master
+
+Top level modules:
+	Ahb_master
+
+} {} {}} D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Apb_control_block.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Apb_control_block.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Ahb2Apb_bridge
+
+Top level modules:
+	Ahb2Apb_bridge
+
+} {} {}} D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Ahb_slave.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Ahb_slave.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Ahb_slave
+
+Top level modules:
+	Ahb_slave
+
+} {} {}} D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Apb_Slave.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/Apb_Slave.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Apb_slave
+
+Top level modules:
+	Apb_slave
+
+} {} {}} D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/bridge.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/20_AHB_APB_Bridge_Design/bridge.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Bridge_Top
+
+Top level modules:
+	Bridge_Top
+
+} {} {}}
