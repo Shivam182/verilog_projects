@@ -1,0 +1,36 @@
+D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/ASYNC_FIFO.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/ASYNC_FIFO.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ASYNC_FIFO
+
+Top level modules:
+	ASYNC_FIFO
+
+} {} {}} D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/synchronizer.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/synchronizer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module flop_synchronizer
+
+Top level modules:
+	flop_synchronizer
+
+} {} {}} D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/writePtr_block.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/writePtr_block.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module write_Ptr_block
+
+Top level modules:
+	write_Ptr_block
+
+} {} {}} D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/fifo_RAM.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/fifo_RAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fifo_RAM
+
+Top level modules:
+	fifo_RAM
+
+} {} {}} D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/readPtr_block.v {1 {vlog -work work -stats=none D:/VLSI_Design/verilog_practice/21_Async_FIFO_Design/readPtr_block.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module read_ptr_block
+
+Top level modules:
+	read_ptr_block
+
+} {} {}}
