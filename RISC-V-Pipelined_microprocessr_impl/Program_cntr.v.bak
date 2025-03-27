@@ -1,0 +1,11 @@
+module program_cntr(
+	input rst, clk,
+	input [31:0] PC_NEXT,
+	output reg [31:0] PC
+);
+
+
+
+
+
+endmodule
